@@ -13,6 +13,11 @@ app.use(
   })
 )
 
+// 為根路徑添加一個GET請求處理器
+app.get("/", (req, res) => {
+  res.send("Welcome to the API proxy server!")
+})
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
